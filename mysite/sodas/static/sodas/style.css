@@ -1,0 +1,24 @@
+.swig-header
+{
+    background-color: #E95C5D;
+    font-family: "Wide Latin", serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.swig-search
+{
+    width: 250px;
+}
+
+.result-border
+{
+    border: 2px solid black;
+    padding: 1.3rem;
+}
+
+/* Used for troubleshooting purposes */
+.troubleshoot
+{
+    border: 2px solid red;
+}

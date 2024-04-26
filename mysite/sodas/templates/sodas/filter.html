@@ -16,24 +16,24 @@
     <div class="row">
         <div class="col-md-8">
             <form id="swig-form" method="get">
+                <h3 class="text-center">Drink Choices</h3>
                 {# All the beverage options go here #}
                 <div class="form-group">
-                    <h3 class="text-center">Drink Choices</h3>
                     {# Radio buttons for drink choices #}
                     <input type="radio" id="drpepper" value="drpepper" name="soda">
-                    <label for="">Dr. Pepper</label><br>
+                    <label class="base-radio" for="">Dr. Pepper</label>
                     <input type="radio" id="coke" value="coke" name="soda">
-                    <label for="">Coke/Pepsi</label><br>
+                    <label class="base-radio" for="">Coke/Pepsi</label>
                     <input type="radio" id="mtndew" value="mtndew" name="soda">
-                    <label for="">Mountain Dew</label><br>
+                    <label class="base-radio" for="">Mountain Dew</label>
                     <input type="radio" id="sprite" value="sprite" name="soda">
-                    <label for="">Sprite</label><br>
+                    <label class="base-radio" for="">Sprite</label><br>
                     <input type="radio" id="lemonade" value="lemonade" name="soda">
-                    <label for="">Lemonade</label><br>
+                    <label class="base-radio" for="">Lemonade</label>
                     <input type="radio" id="rootbeer" value="rootbeer" name="soda">
-                    <label for="">Root Beer</label><br>
+                    <label class="base-radio" for="">Root Beer</label>
                     <input type="radio" id="fresca" value="fresca" name="soda">
-                    <label for="">Fresca</label><br>
+                    <label class="base-radio" for="">Fresca</label>
                 </div>
                 {# All the syrup flavors go here #}
                 <div class="form-group">
@@ -64,6 +64,7 @@
                     <label for="">Vanilla</label><br>
                 </div>
                 <div class="form-group">
+                    {# Submit Button #}
                     <button type="submit" class="btn btn-primary m-3 swig-search">Search</button>
                 </div>
             </form>
@@ -72,10 +73,12 @@
             <h2 class="text-center">Results</h2>
             <div class="result-border">
                 {% for soda in soda_object %}
-                    <p>(Swig) <strong>{{ soda.name }}</strong></p>
+                    <p class="result-entry">(Swig) <strong>{{ soda.name }}</strong></p>
                 {# This executes when the search turns up nothing #}
                 {% empty %}
-                    <div>No combinations found</div>
+                    <div class="text-center text-danger">
+                        <strong>No combinations found</strong>
+                    </div>
                 {% endfor %}
             </div>
         </div>

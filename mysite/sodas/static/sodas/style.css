@@ -6,6 +6,10 @@
     margin-bottom: 10px;
 }
 
+.base-radio {
+    width: 22%;
+}
+
 .swig-search
 {
     width: 250px;
@@ -14,11 +18,21 @@
 .result-border
 {
     border: 2px solid black;
-    padding: 1.3rem;
+    padding: 1.1rem;
+}
+
+.result-entry
+{
+    margin: 0;
 }
 
 /* Used for troubleshooting purposes */
-.troubleshoot
+.trouble
 {
     border: 2px solid red;
+}
+
+.trouble1
+{
+    border: 2px solid blueviolet;
 }
